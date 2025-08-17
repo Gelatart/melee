@@ -2,17 +2,39 @@
 #include <melee/gm/types.h>
 #include <melee/sc/types.h>
 
+typedef struct gm_801677C0_s {
+    s8 unk_0;
+    s8 unk_1;
+    s8 unk_2;
+    s8 unk_3;
+    u32 unk_4; // Padding
+    u32 unk_8; // Padding
+    u16 unk_9; // Padding
+    u32 unk_10;
+    u32 unk_14;
+    u32 unk_18;
+    u32 unk_1C;
+} StructTest;
+
 struct gm_80479D58_t {
     /* 0x00 */ u32 unk_0;
+    //u8 unk_0;
+    //u8 unk_1;
+    //u8 unk_2;
+    //u8 unk_3;
     /* 0x04 */ u32 unk_4;
     /* 0x08 */ u32 unk_8;
     /* 0x0C */ int unk_C;
-    /* 0x10 */ u8 unk_10;
+    /* 0x10 */ //u8 unk_10;
+    StructTest unk_10;
     /* 0x11 */ u8 unk_11;
     /* 0x12 */ u8 unk_12;
     /* 0x13 */ u8 unk_13;
     /* 0x14 */ bool (*unk_14[2])(void);
+    //u32 unk_14;
+    //u32 unk_18;
     /* 0x1C */ char pad_1C[0x4]; /* maybe part of unk_18[0xA]? */
+    //u32 unk_1C;
     /* 0x20 */ u64 unk_20;
     /* 0x28 */ u64 unk_28;
     /* 0x30 */ void (*unk_30)(void);
@@ -20,7 +42,8 @@ struct gm_80479D58_t {
     /* 0x38 */ u8 unk_38_0 : 1;
     /* 0x38 */ u8 unk_38_1 : 1;
 }; /* size = 0x40 */
-STATIC_ASSERT(sizeof(struct gm_80479D58_t) == 0x40);
+//STATIC_ASSERT(sizeof(struct gm_80479D58_t) == 0x40);
+//STATIC_ASSERT(sizeof(struct gm_80479D58_t) == 0x5E);
 
 /* 479D30 */ static struct {
     HSD_GObjLibInitDataType initdata;

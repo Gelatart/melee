@@ -386,7 +386,13 @@ GXColor gm_80160968(u8 arg0)
 
 /// #gm_80162B4C
 
-/// #gm_80162B98
+
+void gm_80162B98(void) {
+    u32* temp_r3;
+
+    temp_r3 = gmMainLib_8015CD8C();
+    *temp_r3 = MAX(*temp_r3 + 1, -1);
+}
 
 /// #gm_80162BD8
 
@@ -942,7 +948,19 @@ void fn_8016719C(s32 slot, s32 subchar)
 
 /// #fn_80167638
 
-/// #gm_801677C0
+void gm_801677C0(StructTest* arg0)
+{
+    //void gm_801677C0(struct gm_80479D58_t* arg0)
+    // void gm_801677C0(StructTest* arg0)
+    arg0->unk_0 = 0;
+    arg0->unk_1 = 0;
+    arg0->unk_2 = 0;
+    arg0->unk_3 = 0;
+    arg0->unk_1C = 0;
+    arg0->unk_18 = 0;
+    arg0->unk_14 = 0;
+    arg0->unk_10 = 0;
+}
 
 void gm_801677E8(s8 arg0)
 {

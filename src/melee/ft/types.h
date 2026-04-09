@@ -643,7 +643,10 @@ struct ftData {
     /* +24 */ UNK_T x24;
     /* +28 */ WaitStruct* x28;
     /* +2C */ struct ftDynamics* x2C;
-    /* +30 */ UNK_T x30;
+    /* +30 */ struct ftData_x30 {
+        /* +0 */ int count;
+        /* +4 */ ftHurtboxInit* inits;
+    }* x30;
     /* +34 */ struct ftData_x34 {
         /* +0 */ Fighter_Part x0;
         /* +4 */ float scale;
@@ -1332,7 +1335,7 @@ struct Fighter {
         /* +10 */ HSD_JObj* jobj;
         /* +14 */ float x14;
         /* +18 */ Vec3 x18;
-        /* +24 */ u8 pad[0x28 - 0x24];
+        /* +24 */ int x24;
     } x1670[1]; ///< @todo figure out proper size
     /* fp+1674 */ u8 filler_x1674[0x1828 - 0x1670 - 0x28];
     /* fp+1828 */ enum_t x1828;
@@ -1850,7 +1853,7 @@ typedef struct ftDynamics {
         /*  +4 */ ArticleDynamicBones* ftDynamicBones;
     };
     /*  +8 */ int x4;
-    /*  +C */ void* x8;
+    /*  +C */ struct ftData_x38* x8;
     /* +10 */ FigaTree*** x10;
 } ftDynamics;
 
@@ -1891,7 +1894,7 @@ typedef struct DmgLogEntry {
         FighterHurtCapsule* hurt1;
     };
     /* +14 */ Vec3 pos;
-    /* +20 */ int x20;
+    /* +20 */ float x20;
     /* +24 */ size_t size_of_xC;
 } DmgLogEntry;
 STATIC_ASSERT(sizeof(struct DmgLogEntry) == 0x28);

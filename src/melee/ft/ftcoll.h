@@ -35,12 +35,12 @@
                                   HitCapsule* hit1);
 /* 077464 */ void ftColl_80077464(Item*, HitCapsule*, Fighter*);
 /* 077688 */ void ftColl_80077688(Item*, HitCapsule*, Fighter*, Vec3*, f32);
-/* 077970 */ UNK_RET ftColl_80077970(UNK_PARAMS);
-/* 077C60 */ UNK_RET ftColl_80077C60(UNK_PARAMS);
+/* 077970 */ void ftColl_80077970(Item*, HitCapsule*, Fighter*, HitCapsule*);
+/* 077C60 */ bool ftColl_80077C60(Item*, HitCapsule*, Fighter*, HitCapsule*);
 /* 078384 */ void ftColl_80078384(Fighter*, FighterHurtCapsule*, HitCapsule*);
 /* 078488 */ void ftColl_80078488(Fighter*);
 /* 0784B4 */ void ftColl_800784B4(Fighter*, HitCapsule*, HitCapsule*);
-/* 078538 */ void ftColl_80078538(Fighter_GObj*, Vec3*, float, float);
+/* 078538 */ void ftColl_80078538(Fighter_GObj*, Vec3*, u32, float, float);
 /* 07861C */ UNK_RET ftColl_8007861C(Fighter_GObj*, Fighter_GObj* gobj, int,
                                      int, int, UNK_T, int, UNK_T, int);
 /* 078710 */ void ftColl_80078710(Fighter_GObj*, Fighter_GObj*, UNK_T arg2);
@@ -48,13 +48,13 @@
 /* 0787B4 */ void ftColl_800787B4(Item_GObj*, Fighter_GObj*, int);
 /* 0788D4 */ void ftColl_800788D4(Fighter_GObj* gobj);
 /* 07891C */ void ftColl_8007891C(Fighter_GObj*, Fighter_GObj*, float);
-/* 078998 */ UNK_RET ftColl_80078998(UNK_PARAMS);
+/* 078998 */ void ftColl_80078998(HSD_GObj*, HSD_GObj*, float);
 /* 078A2C */ void ftColl_80078A2C(Fighter_GObj*);
 /* 078C70 */ void ftColl_80078C70(Fighter_GObj*);
 /* 07925C */ void ftColl_8007925C(Fighter_GObj*);
 /* 079AB0 */ float ftColl_80079AB0(Fighter*, HitCapsule*, int, float, float,
                                    float, float);
-/* 079C70 */ float ftColl_80079C70(Fighter*, Fighter*, void*, int);
+/* 079C70 */ float ftColl_80079C70(Fighter*, Fighter*, HitCapsule*, int);
 /* 079EA8 */ float ftColl_80079EA8(Fighter*, HitCapsule*, int);
 /// /* 07A06C */ static void ftColl_8007A06C(float facing_dir, DmgLogEntry**
 /// log,
